@@ -30,6 +30,8 @@ _PREDEFINED_SPLITS_TEXT = {
     "art_train": ("ArT/rename_artimg_train", "ArT/annotations/abcnet_art_train.json"), 
     "lsvt_train": ("LSVT/rename_lsvtimg_train", "LSVT/annotations/abcnet_lsvt_train.json"), 
     "chnsyn_train": ("ChnSyn/syn_130k_images", "ChnSyn/annotations/chn_syntext.json"),
+    "icdar2013_train": ("icdar2013/train-frames", "icdar2013/train.json"),
+    "icdar2013_val": ("icdar2013/test-frames", "icdar2013/test.json")
 }
 
 metadata_text = {

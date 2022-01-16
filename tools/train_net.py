@@ -226,6 +226,11 @@ def main(args):
 if __name__ == "__main__":
     args = default_argument_parser().parse_args()
     print("Command Line Args:", args)
+
+    import torch.distributed as dist
+    dist.init_process_group(backend='nccl', init_method='tcp://localhost:23456', rank=0, world_size=1)
+    print("already init\n")
+
     launch(
         main,
         args.num_gpus,

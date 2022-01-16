@@ -1,4 +1,4 @@
-_BASE_: "Base-TotalText.yaml"
+_BASE_: "Base-ICDAR2013.yaml"
 MODEL:
   WEIGHTS: "weights/batext/pretrain_attn_R_50.pth"
   RESNETS:
