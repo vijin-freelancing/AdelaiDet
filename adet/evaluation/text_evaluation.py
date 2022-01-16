@@ -62,6 +62,9 @@ class TextEvaluator(DatasetEvaluator):
         elif "ctw1500" in dataset_name:
             self._text_eval_gt_path = "datasets/evaluation/gt_ctw1500.zip"
             self._word_spotting = False
+        if "icdar2013" in dataset_name:
+            self._text_eval_gt_path = "datasets/evaluation/gt_icdar2013.zip"
+            self._word_spotting = True
         else:
             self._text_eval_gt_path = ""
         self._text_eval_confidence = cfg.MODEL.FCOS.INFERENCE_TH_TEST
