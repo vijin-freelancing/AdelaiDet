@@ -23,7 +23,7 @@ def gen_crop_transform_with_instance(crop_size, image_size, instances, crop_box=
     center_yx = (bbox[1] + bbox[3]) * 0.5, (bbox[0] + bbox[2]) * 0.5
     assert (
         image_size[0] >= center_yx[0] and image_size[1] >= center_yx[1]
-    ), "The annotation bounding box is outside of the image!"
+    ), f"The annotation bounding box is outside of the image! {image_size}, {bbox}, {crop_size}, {center_yx}"
     assert (
         image_size[0] >= crop_size[0] and image_size[1] >= crop_size[1]
     ), "Crop size is larger than image size!"

@@ -119,7 +119,7 @@ class TextEvaluator(DatasetEvaluator):
             for line in fres:
                 line = line.strip()
                 s = line.split(': ')
-                filename = '{:07d}.txt'.format(int(s[0]))
+                filename = '{}.txt'.format(int(s[0]))
                 outName = os.path.join(dirn, filename)
                 with open(outName, 'a') as fout:
                     ptr = s[1].strip().split(',####')
